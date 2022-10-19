@@ -7,18 +7,18 @@ Global Styles
 :root {
   --clr-bcg: #fff;
   --clr-font: #282c35;
-  --clr-primary: #d23669;
+  --clr-primary: #a136d2;
 }
 
 .dark-theme {
   --clr-bcg: #282c35;
   --clr-font: #fff;
-  --clr-primary: #ffa7c4;
+  --clr-primary: #dfa7ff;
 }
 .light-theme {
   --clr-bcg: #fff;
   --clr-font: #282c35;
-  --clr-primary: #d23669;
+  --clr-primary: #a136d2;
 }
 *,
 ::after,
