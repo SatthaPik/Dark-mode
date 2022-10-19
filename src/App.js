@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import data from './data';
 import Article from './Article';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const getStorageTheme = () => {
   let theme = 'light-theme';
@@ -13,7 +14,9 @@ const getStorageTheme = () => {
 function App() {
   const [theme, setTheme] = useState(getStorageTheme());
 
-  const toggleTheme = () => {
+  const [icon, setIcon] = useState(false);
+  const handleClick = () => {
+    setIcon(!icon);
     if (theme === 'light-theme') {
       setTheme('dark-theme');
     } else {
@@ -28,14 +31,14 @@ function App() {
   return (
     <main>
       <nav>
-        <div className="nav-center">
+        <div className='nav-center'>
           <h1>overreacted</h1>
-          <button className="btn" onClick={toggleTheme}>
-            toggle
-          </button>
+          <div className='btn' onClick={handleClick}>
+            {!icon ? <FaSun /> : <FaMoon />}
+          </div>
         </div>
       </nav>
-      <section className="articles">
+      <section className='articles'>
         {data.map((item) => {
           return <Article key={item.id} {...item} />;
         })}
